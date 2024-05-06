@@ -5,15 +5,19 @@
  * @format
  */
 
-import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {View} from 'react-native';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
+import LoginScreen from './src/Screens/authentication/login';
+import Toast from 'react-native-toast-message';
+import PreLoginScreen from './src/Screens/authentication/pre-login';
+import {AppNavigator} from './src/Navigation';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <View />
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <AppNavigator />
+      <Toast />
+    </SafeAreaProvider>
   );
 };
 
